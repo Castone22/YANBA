@@ -74,6 +74,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>searchability.feature</DependentUpon>
     </Compile>
+    <Compile Include="PageObjects\PostPage.cs" />
     <Compile Include="PageObjects\IndexPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\StepDef.cs" />
