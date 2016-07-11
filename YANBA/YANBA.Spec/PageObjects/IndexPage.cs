@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -10,13 +11,10 @@ namespace YANBA.Spec.PageObjects
 {
     class IndexPage
     {
-        private readonly IWebDriver driver;
-        private readonly string url = @"http://localhost:51991/";
 
 
         public IndexPage(IWebDriver browser)
         {
-            this.driver = browser;
             PageFactory.InitElements(browser, this);
         }
 
@@ -49,16 +47,21 @@ namespace YANBA.Spec.PageObjects
         public IWebElement PostSummaryText { get; set; }
 
         [FindsBy(How = How.Id, Using = "post_link_")]
-        public IWebElement PostList { get; set; }
+        public IWebElement PostLink { get; set; }
 
-        [FindsBy(How = How.Id, Using = "post_author_")]
-        public IWebElement PostAuthor { get; set; }
 
-        [FindsBy(How = How.Id, Using = "post_date_")]
-        public IWebElement PostDate { get; set; }
 
-        [FindsBy(How = How.Id, Using = "post_title_")]
-        public IWebElement PostTitle { get; set; }
+
+        public void SelectLatestPost()
+        {
+            PostLink.Click();
+        }
+
+        public void CheckIfSummaryBoxHasExpectedSummary(String expectedSummary)
+        {
+            Assert.Equals(PostSummaryText.Text, expectedSummary);
+        }
+
 
     }
 }

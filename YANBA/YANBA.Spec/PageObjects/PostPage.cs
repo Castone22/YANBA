@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -31,11 +32,25 @@ namespace YANBA.Spec.PageObjects
         [FindsBy(How = How.Id, Using = "post_title")]
         public IWebElement PostTitle { get; set; }
 
-        [FindsBy(How = How.Id, Using = "edit_post_button")]
-        public IWebElement EditPostButton { get; set}
+        public void CheckIfPostHasExpectedContent(String expectedInput)
+        {
+            Assert.Equals(PostContent.Text, expectedInput);
+        }
 
-        [FindsBy(How = How.Id, Using = "delete_post_button")]
-        public IWebElement DeletePostButton { get; set}
+        public void CheckIfPostHasExpectedAuthor(String expectedInput)
+        {
+            Assert.Equals(PostAuthor.Text, expectedInput);
+        }
+
+        public void CheckIfPostHasExpectedDate(String expectedInput)
+        {
+            Assert.Equals(PostDate.Text, expectedInput);
+        }
+
+        public void CheckIfPostHasExpectedTitle(String expectedInput)
+        {
+            Assert.Equals(PostTitle.Text, expectedInput);
+        }
 
     }
 }
