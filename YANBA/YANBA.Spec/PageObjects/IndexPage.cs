@@ -41,7 +41,7 @@ namespace YANBA.Spec.PageObjects
 
 
         [FindsBy(How = How.Id, Using = "new_post_button")]
-        public IWebElement PostSummaryText { get; set; }
+        public IWebElement NewPostButton { get; set; }
 
 
 
