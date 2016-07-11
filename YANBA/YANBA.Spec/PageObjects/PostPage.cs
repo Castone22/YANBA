@@ -31,5 +31,11 @@ namespace YANBA.Spec.PageObjects
         [FindsBy(How = How.Id, Using = "post_title")]
         public IWebElement PostTitle { get; set; }
 
+        [FindsBy(How = How.Id, Using = "edit_post_button")]
+        public IWebElement EditPostButton { get; set}
+
+        [FindsBy(How = How.Id, Using = "delete_post_button")]
+        public IWebElement DeletePostButton { get; set}
+
     }
 }
