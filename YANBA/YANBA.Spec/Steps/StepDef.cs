@@ -53,5 +53,60 @@ namespace YANBA.Spec.Steps
         {
             ScenarioContext.Current.Pending();
         }
+
+        [Then(@"I should see comments left by other readers")]
+        public void ThenIShouldSeeCommentsLeftByOtherReaders()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Given(@"I am reading a blog post from my favorite blogger")]
+        public void GivenIAmReadingABlogPostFromMyFavoriteBlogger()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I add my genius comment to the blog post")]
+        public void WhenIAddMyGeniusCommentToTheBlogPost()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"my genius comment is at the top of the blog post comments")]
+        public void ThenMyGeniusCommentIsAtTheTopOfTheBlogPostComments()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"the url should contain information about the post")]
+        public void ThenTheUrlShouldContainInformationAboutThePost()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Given(@"I am logged in as a blogger")]
+        public void GivenIAmLoggedInAsABlogger()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I publish a new blog post")]
+        public void WhenIPublishANewBlogPost()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I am notified that the blog post was successfully added")]
+        public void ThenIAmNotifiedThatTheBlogPostWasSuccessfullyAdded()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"the newly added blog post is at the top of the recent posts list")]
+        public void ThenTheNewlyAddedBlogPostIsAtTheTopOfTheRecentPostsList()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
     }
 }
