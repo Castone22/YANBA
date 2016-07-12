@@ -9,12 +9,12 @@ using TechTalk.SpecFlow;
 namespace YANBA.Spec.Support
 {
     [Binding]
-    public class BeforeAllTests
+    public class Hooks
     {
         private readonly IObjectContainer objectContainer;
         private static SeleniumContext seleniumContext;
 
-        public BeforeAllTests(IObjectContainer container)
+        public Hooks(IObjectContainer container)
         {
             this.objectContainer = container;
         }
@@ -32,7 +32,7 @@ namespace YANBA.Spec.Support
         }
 
         [AfterTestRun]
-        public void RunAfterAllTests()
+        public static void RunAfterAllTests()
         {
             seleniumContext.WebDriver.Close();
         }
