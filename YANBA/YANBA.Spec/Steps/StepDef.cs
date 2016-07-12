@@ -8,6 +8,13 @@ namespace YANBA.Spec.Steps
     [Binding]
     public class StepDef
     {
+        private SeleniumContext seleniumContext;
+
+        public StepDef(SeleniumContext seleniumContext)
+        {
+            this.seleniumContext = seleniumContext;
+        }
+
         [Given(@"my favorite blogger has been very active")]
         public void GivenMyFavoriteBloggerHasBeenVeryActive()
         {
@@ -17,7 +24,7 @@ namespace YANBA.Spec.Steps
         [Given(@"I visit the blog for my favorite blogger")]
         public void GivenIVisitTheBlogForMyFavoriteBlogger()
         {
-            ScenarioContext.Current.Pending();
+            seleniumContext.WebDriver.Navigate().GoToUrl("https://google.com");
         }
         
         [When(@"I visit the blog for my favorite blogger")]

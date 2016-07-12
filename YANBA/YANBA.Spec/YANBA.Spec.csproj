@@ -78,7 +78,8 @@
     <Compile Include="PageObjects\IndexPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\StepDef.cs" />
-    <Compile Include="Support\Hooks.cs" />
+    <Compile Include="Support\BeforeAllTests.cs" />
+    <Compile Include="Support\SeleniumContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
