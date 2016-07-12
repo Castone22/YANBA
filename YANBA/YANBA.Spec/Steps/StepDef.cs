@@ -24,7 +24,7 @@ namespace YANBA.Spec.Steps
         [Given(@"I visit the blog for my favorite blogger")]
         public void GivenIVisitTheBlogForMyFavoriteBlogger()
         {
-            seleniumContext.WebDriver.Navigate().GoToUrl("https://google.com");
+            new IndexPage(seleniumContext.WebDriver);
         }
         
         [When(@"I visit the blog for my favorite blogger")]

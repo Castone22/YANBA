@@ -11,10 +11,11 @@ namespace YANBA.Spec.PageObjects
 {
     class IndexPage
     {
-
+        private readonly IWebDriver driver;
 
         public IndexPage(IWebDriver browser)
         {
+            this.driver = browser;
             PageFactory.InitElements(browser, this);
         }
 
